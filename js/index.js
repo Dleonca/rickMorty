@@ -6,6 +6,11 @@ const cartoonCharacters = async (pagina) =>{
     //llenado de select
     selectRes = document.querySelector('#namescc');
     selectRes.innerHTML="";
+      optItem = document.createElement('option');
+      optItem.classList.add("opt");
+      optItem.value =`0`;
+      optItem.innerHTML = `Todos`
+      selectRes.appendChild(optItem);
     data.results.map(item => {
       optItem = document.createElement('option');
       optItem.classList.add("opt");
