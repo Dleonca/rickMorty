@@ -3,6 +3,17 @@ const cartoonCharacters = async (pagina) =>{
     const response = await fetch(url);
     const data = await response.json() ;
     console.log(data);
+    //llenado de select
+    selectRes = document.querySelector('#namescc');
+    selectRes.innerHTML="";
+    data.results.map(item => {
+      optItem = document.createElement('option');
+      optItem.classList.add("opt");
+      optItem.value =`${item.id}`;
+      optItem.innerHTML = `${item.name}`
+      selectRes.appendChild(optItem);
+   });
+    //llenado de cards
     divRes = document.querySelector("#resultado");
     divRes.innerHTML = "";
     data.results.map(item => {
@@ -19,8 +30,7 @@ const cartoonCharacters = async (pagina) =>{
           </div>
         </div>`
         divRes.appendChild(divItem);
-
-    });
+     });
     
 }
 cartoonCharacters(1);
