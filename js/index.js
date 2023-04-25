@@ -14,9 +14,8 @@ const cartoonCharacters = async (pagina) =>{
         <div class="card m-2  " >
           <img src="${item.image}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Name:${item.name}</p>
-            <p class="card-text">Gender:${item.gender}</p>
-            <p class="card-text">Species:${item.species}</p>
+            <p class="card-text titleP">${item.name}</p>
+            <p class="card-text titleS">Your gender is ${item.gender} and your species is ${item.species}. </p>
           </div>
         </div>`
         divRes.appendChild(divItem);

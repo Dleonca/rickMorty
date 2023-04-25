@@ -10,28 +10,48 @@
 </head>
 <body class="page">
     <header class="pagehead">
-        <h1>Cartoon Characters The Rick and Morty</h1>
+        <div class="col-12 col-md-2">
+          <img src="images/colegiala.png" alt="" width="30">
+          <img src="images/mensajero.png" alt="" width="30">
+          <img src="images/extraterrestres.png" alt="" width="30">
+          <img src="images/extraterrestre.png" alt="" width="30">
+        </div>
+        <div class="col-12 col-md-8">
+            <h1> Cartoon Characters The Rick and Morty </h1>
+        </div>
+        <div class="col-12 col-md-2">
+            <img src="images/ovni.png" alt="" width="30">
+            <img src="images/pinguino.png" alt="" width="30">
+            <img src="images/wild-animals.png" alt="" width="30">
+            <img src="images/artista.png" alt="" width="30">
+        </div>
     </header>
     <main>
+        <section class="pag" >
+            <div id="pag">
+              <label for="pagina">Pagination</label>
+              <select name="pagina" id="pagina" onchange="cartoonCharacters(this.value)">
+                  <script>
+                      for (let i = 1; i<=42; i++){
+                          document.write(`<option value="${i}">${i}</option>`);
+                      }
+                  </script>
+              </select>
+            </div>
+          </section>
         <div class="container">
-            <section class="pag" >
-              <div id="pag">
-                <select name="pagina" id="pagina" onchange="cartoonCharacters(this.value)">
-                    <script>
-                        for (let i = 1; i<=42; i++){
-                            document.write(`<option value="${i}">${i}</option>`);
-                        }
-                    </script>
-                </select>
-              </div>
-            </section>
             <section class="info">
                <div id="resultado" class="resultado"></div>
             </section>
         
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <label for="">
+            DESARROLLADOR
+            Daniela Leon Cantero
+        </label>
+    </footer>
     <script src="js/index.js"></script>
 </body>
 </html>
